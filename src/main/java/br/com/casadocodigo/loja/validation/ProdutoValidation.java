@@ -8,8 +8,6 @@ import br.com.casadocodigo.loja.models.Produto;
 
 
 public class ProdutoValidation implements Validator{
-	
-	
 
 	@Override
 	public boolean supports(Class<?> classes) {
