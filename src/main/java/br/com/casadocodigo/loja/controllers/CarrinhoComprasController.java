@@ -41,4 +41,10 @@ public class CarrinhoComprasController {
         Produto produto = produtoDAO.find(produtoId);
         return new CarrinhoItem(produto,tipoPreco);
     }
+
+    @RequestMapping("/remover")
+    public ModelAndView remover(Integer produtoId, TipoPreco tipoPreco) {
+        carrinho.remover(produtoId, tipoPreco);
+        return new ModelAndView("redirect:/carrinho");
+    }
 }
